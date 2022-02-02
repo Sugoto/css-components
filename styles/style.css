@@ -4,7 +4,82 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
   background: #121212;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* ====== Context Menu ======*/
+
+.wrapper {
+  position: absolute;
+  visibility: hidden;
+  width: 300px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.1);
+  opacity: 75%;
+}
+
+.wrapper .menu {
+  padding: 10px 12px;
+}
+
+.menu-content .item {
+  display: flex;
+  align-items: center;
+  padding: 0 5px 0 10px;
+  list-style: none;
+  font-size: 22px;
+  height: 50px;
+  border-radius: 5px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.menu-content .item:hover {
+  background: #f2f2f2;
+}
+
+.menu-content .item span {
+  font-size: 19px;
+  margin-left: 8px;
+}
+
+.menu-content .setting {
+  /* display: flex; */
+  margin-top: -5px;
+  padding: 5px 12px;
+  border-top: 1px solid #ccc;
+}
+
+.menu-content .share {
+  justify-content: space-between;
+  position: relative;
+}
+
+.share .share-menu {
+  position: absolute;
+  background: #fff;
+  width: 200px;
+  right: -200px;
+  top: -35px;
+  padding: 13px;
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+  transition: 200ms ease;
+}
+
+.share:hover .share-menu {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* ====== Glowing button ======*/
@@ -14,7 +89,6 @@ nav {
   justify-content: center;
   align-items: center;
   min-height: 50vh;
-  
 }
 
 .btn {
@@ -107,7 +181,7 @@ nav {
 }
 
 .dl.inactive {
-    cursor: initial;
+  cursor: initial;
 }
 
 .dl::before {
@@ -158,4 +232,3 @@ nav {
   font-size: 28px;
   margin-left: 8px;
 }
-
